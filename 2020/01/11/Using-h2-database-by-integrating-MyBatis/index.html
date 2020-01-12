@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Bootstrap," />
+  <meta name="keywords" content="h2,MyBatis," />
 
 
 
@@ -79,20 +79,19 @@
 
 
 
-<meta name="description" content="My Space is a community style website.The target of creating this website is to learn Spring Boot.The first step is to add a header. Here I am using Bootstrap as the format.    Download Bootstrap and">
+<meta name="description" content="My Space uses H2 database by integrating MyBatis. In order to import MyBatis, we need to inject the dependency.    Get MyBatis dependency on Maven Repository   1234567891011121314151617181920212223242">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Add Bootstrap header to My Space">
-<meta property="og:url" content="http://yoursite.com/2020/01/09/Add-Bootstrap-header-to-My-Space/index.html">
+<meta property="og:title" content="Using h2 database by integrating MyBatis">
+<meta property="og:url" content="http://yoursite.com/2020/01/11/Using-h2-database-by-integrating-MyBatis/index.html">
 <meta property="og:site_name" content="Nanxi&#39;s Place">
-<meta property="og:description" content="My Space is a community style website.The target of creating this website is to learn Spring Boot.The first step is to add a header. Here I am using Bootstrap as the format.    Download Bootstrap and">
+<meta property="og:description" content="My Space uses H2 database by integrating MyBatis. In order to import MyBatis, we need to inject the dependency.    Get MyBatis dependency on Maven Repository   1234567891011121314151617181920212223242">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/NanxiNanxi/NanxiNanxi.github.io/master/2020/01/09/Add-Bootstrap-header-to-My-Space/BootstrapHeader.JPG">
-<meta property="article:published_time" content="2020-01-10T01:02:54.000Z">
-<meta property="article:modified_time" content="2020-01-10T02:42:08.557Z">
+<meta property="article:published_time" content="2020-01-12T02:51:51.000Z">
+<meta property="article:modified_time" content="2020-01-12T02:54:11.026Z">
 <meta property="article:author" content="Nanxi Zhou">
-<meta property="article:tag" content="Bootstrap">
+<meta property="article:tag" content="h2">
+<meta property="article:tag" content="MyBatis">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/NanxiNanxi/NanxiNanxi.github.io/master/2020/01/09/Add-Bootstrap-header-to-My-Space/BootstrapHeader.JPG">
 
 
 
@@ -122,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2020/01/09/Add-Bootstrap-header-to-My-Space/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/01/11/Using-h2-database-by-integrating-MyBatis/"/>
 
 
 
 
 
-  <title>Add Bootstrap header to My Space | Nanxi's Place</title>
+  <title>Using h2 database by integrating MyBatis | Nanxi's Place</title>
   
 
 
@@ -245,7 +244,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/09/Add-Bootstrap-header-to-My-Space/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/11/Using-h2-database-by-integrating-MyBatis/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Nanxi Zhou">
@@ -262,7 +261,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Add Bootstrap header to My Space</h1>
+          <h1 class="post-title" itemprop="name headline">Using h2 database by integrating MyBatis</h1>
         
 
         <div class="post-meta">
@@ -274,8 +273,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-09T19:02:54-06:00">
-                2020-01-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-11T20:51:51-06:00">
+                2020-01-11
               </time>
             
 
@@ -334,71 +333,9 @@
       
 
       
-        <p>My Space is a community style website.The target of creating this website is to learn Spring Boot.<br>The first step is to add a header. Here I am using Bootstrap as the format.  </p>
+        <p>My Space uses H2 database by integrating MyBatis. In order to import MyBatis, we need to inject the dependency.  </p>
 <ol>
-<li><p>Download <a href="https://v3.bootcss.com/components/#navbar-default" target="_blank" rel="noopener">Bootstrap</a> and import to IDE (IntellJ Idea).    </p>
-<ul>
-<li>Unzip the file and copy  css/fonts/js to static folder under resources.</li>
-<li>Import Bootstrap to index html page  <pre><code>&lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap.min.css&quot;&gt;  
-&lt;link rel=&quot;stylesheet&quot; href=&quot;css/bootstrap-theme.min.css&quot;&gt;
-&lt;script src=&quot;js/bootstrap.min.js&quot; type=&quot;application/javascript&quot;&gt;&lt;/script&gt; </code></pre></li>
-</ul>
-</li>
-<li><p>Get header’s code from <a href="https://v3.bootcss.com/components/#navbar-default" target="_blank" rel="noopener">Bootstrap document</a>  </p>
-<pre><code>&lt;nav class=&quot;navbar navbar-default&quot;&gt;
-     &lt;div class=&quot;container-fluid&quot;&gt;
-       &lt;!-- Brand and toggle get grouped for better mobile display --&gt;
-       &lt;div class=&quot;navbar-header&quot;&gt;
-         &lt;button type=&quot;button&quot; class=&quot;navbar-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#bs-example-navbar-collapse-1&quot; aria-expanded=&quot;false&quot;&gt;
-           &lt;span class=&quot;sr-only&quot;&gt;Toggle navigation&lt;/span&gt;
-           &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-           &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-           &lt;span class=&quot;icon-bar&quot;&gt;&lt;/span&gt;
-         &lt;/button&gt;
-         &lt;a class=&quot;navbar-brand&quot; href=&quot;#&quot;&gt;Brand&lt;/a&gt;
-       &lt;/div&gt;
-
-       &lt;!-- Collect the nav links, forms, and other content for toggling --&gt;
-       &lt;div class=&quot;collapse navbar-collapse&quot; id=&quot;bs-example-navbar-collapse-1&quot;&gt;
-         &lt;ul class=&quot;nav navbar-nav&quot;&gt;
-           &lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Link &lt;span class=&quot;sr-only&quot;&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
-           &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
-           &lt;li class=&quot;dropdown&quot;&gt;
-             &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-             &lt;ul class=&quot;dropdown-menu&quot;&gt;
-               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-               &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
-               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-               &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
-               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;One more separated link&lt;/a&gt;&lt;/li&gt;
-             &lt;/ul&gt;
-           &lt;/li&gt;
-         &lt;/ul&gt;
-         &lt;form class=&quot;navbar-form navbar-left&quot;&gt;
-           &lt;div class=&quot;form-group&quot;&gt;
-             &lt;input type=&quot;text&quot; class=&quot;form-control&quot; placeholder=&quot;Search&quot;&gt;
-           &lt;/div&gt;
-           &lt;button type=&quot;submit&quot; class=&quot;btn btn-default&quot;&gt;Submit&lt;/button&gt;
-         &lt;/form&gt;
-         &lt;ul class=&quot;nav navbar-nav navbar-right&quot;&gt;
-           &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
-           &lt;li class=&quot;dropdown&quot;&gt;
-             &lt;a href=&quot;#&quot; class=&quot;dropdown-toggle&quot; data-toggle=&quot;dropdown&quot; role=&quot;button&quot; aria-haspopup=&quot;true&quot; aria-expanded=&quot;false&quot;&gt;Dropdown &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/a&gt;
-             &lt;ul class=&quot;dropdown-menu&quot;&gt;
-               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Another action&lt;/a&gt;&lt;/li&gt;
-               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-               &lt;li role=&quot;separator&quot; class=&quot;divider&quot;&gt;&lt;/li&gt;
-               &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-             &lt;/ul&gt;
-           &lt;/li&gt;
-         &lt;/ul&gt;
-       &lt;/div&gt;&lt;!-- /.navbar-collapse --&gt;
-     &lt;/div&gt;&lt;!-- /.container-fluid --&gt;
-   &lt;/nav&gt;
-</code></pre><p>Using this template, My Space header now is like this:<br><img src="https://raw.githubusercontent.com/NanxiNanxi/NanxiNanxi.github.io/master/2020/01/09/Add-Bootstrap-header-to-My-Space/BootstrapHeader.JPG" alt="avatar">  </p>
+<li>Get MyBatis dependency on <a href="https://mvnrepository.com/artifact/org.mybatis/mybatis" target="_blank" rel="noopener">Maven Repository</a>   <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">        <span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.mybatis/mybatis --&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.5.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    ```  </span><br><span class="line">2. Get H2 database engine from [Maven Repository](https://mvnrepository.com/artifact/com.h2database/h2)  </span><br><span class="line">    ```xml</span><br><span class="line">       <span class="comment">&lt;!-- https://mvnrepository.com/artifact/com.h2database/h2 --&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.h2database<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>h2<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.4.200<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    ```   </span><br><span class="line">3. Add the properties in application.properties   </span><br><span class="line">    ```properties</span><br><span class="line">       spring.datasource.url=jdbc:h2:<span class="tag">&lt;<span class="name">h2</span> <span class="attr">path</span>&gt;</span></span><br><span class="line">       spring.datasource.username=<span class="tag">&lt;<span class="name">database</span> <span class="attr">username</span>&gt;</span></span><br><span class="line">       spring.datasource.password=<span class="tag">&lt;<span class="name">database</span> <span class="attr">password</span>&gt;</span></span><br><span class="line">       spring.datasource.driver-class-name=org.h2.Driver</span><br><span class="line">    ```   </span><br><span class="line">4. create tables in h2, add a mapper interface which can execute the query   </span><br><span class="line">    ```java</span><br><span class="line">       @Mapper</span><br><span class="line">       public interface UserMapper &#123;</span><br><span class="line">           @Insert("INSERT INTO table(colomn1,colomn2) VALUES(#&#123;value1&#125;,#value2&#125;")</span><br><span class="line">           void insert(Object obj); //table content object contains those values</span><br><span class="line">       </span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 
@@ -418,7 +355,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Bootstrap/" rel="tag"># Bootstrap</a>
+            <a href="/tags/h2/" rel="tag"># h2</a>
+          
+            <a href="/tags/MyBatis/" rel="tag"># MyBatis</a>
           
         </div>
       
@@ -431,8 +370,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/01/03/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
+              <a href="/2020/01/09/Using-github-OAuth-to-login/" rel="next" title="Using github OAuth to login">
+                <i class="fa fa-chevron-left"></i> Using github OAuth to login
               </a>
             
           </div>
@@ -440,10 +379,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/09/Using-github-OAuth-to-login/" rel="prev" title="Using github OAuth to login">
-                Using github OAuth to login <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
